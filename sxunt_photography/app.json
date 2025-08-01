@@ -1,0 +1,33 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/inspiration/inspiration",
+    "pages/mine/mine",
+    "pages/detail/detail"
+  ],
+  "window": {
+    "navigationBarTitleText": "摄影照片画廊"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "主页",
+        "iconPath": "assets/home.png",
+        "selectedIconPath": "assets/home_active.png"
+      },
+      {
+        "pagePath": "pages/inspiration/inspiration",
+        "text": "灵感瀑布",
+        "iconPath": "assets/inspiration.png",
+        "selectedIconPath": "assets/inspiration_active.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "assets/mine.png",
+        "selectedIconPath": "assets/mine_active.png"
+      }
+    ]
+  }
+}

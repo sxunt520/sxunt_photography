@@ -1,0 +1,6 @@
+.waterfall-container { display: flex; gap: 16rpx; }
+.column { flex: 1; }
+.waterfall-item { margin-bottom: 18rpx; border-radius: 8rpx; overflow: hidden; background: #fff; box-shadow: 0 2rpx 16rpx #eee; }
+.waterfall-item image { width: 100%; }
+.img-desc { padding: 10rpx; font-size: 24rpx; color: #555; }
+.loading, .no-more { text-align: center; color: #888; font-size: 24rpx; margin: 20rpx 0; }

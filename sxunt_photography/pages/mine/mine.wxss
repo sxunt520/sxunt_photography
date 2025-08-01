@@ -1,0 +1,5 @@
+.mine-container { padding: 40rpx; text-align: center; }
+.user-info { margin: 32rpx 0; }
+.avatar { width: 120rpx; height: 120rpx; border-radius: 60rpx; }
+.user-name { font-size: 32rpx; margin-top: 16rpx; font-weight: bold; }
+.user-detail { margin-top: 24rpx; font-size: 24rpx; color: #666; }

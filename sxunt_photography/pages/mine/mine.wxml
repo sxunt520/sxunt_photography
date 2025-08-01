@@ -1,0 +1,15 @@
+<view class="mine-container">
+  <block wx:if="{{!userInfo}}">
+    <button type="primary" open-type="getUserInfo" bindgetuserinfo="onGetUserInfo">登录/注册</button>
+  </block>
+  <block wx:else>
+    <view class="user-info">
+      <image src="{{userInfo.avatarUrl}}" class="avatar" />
+      <view class="user-name">{{userInfo.nickName}}</view>
+    </view>
+    <view class="user-detail">
+      <view>省份：{{userInfo.province}}</view>
+      <view>城市：{{userInfo.city}}</view>
+    </view>
+  </block>
+</view>
