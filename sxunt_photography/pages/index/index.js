@@ -1,6 +1,16 @@
 //const WXAPI = require('apifm-wxapi')
 const MYWXAPI = require('my-wxapi')
 
+const imageCdn = 'https://tdesign.gtimg.com/mobile/demos';
+const swiperList = [
+  `${imageCdn}/swiper1.png`,
+  `${imageCdn}/swiper2.png`,
+  `${imageCdn}/swiper1.png`,
+  `${imageCdn}/swiper2.png`,
+  `${imageCdn}/swiper1.png`,
+];
+
+
 Page({
   data: {
     carouselImages: [
@@ -14,8 +24,23 @@ Page({
       { id: 2, url: '/assets/pic2.jpg', title: '城市夜景' },
       { id: 3, url: '/assets/pic3.jpg', title: '自然之美' },
       { id: 4, url: '/assets/pic4.jpg', title: '人文瞬间' }
-    ]
+    ],
+    current: 0,
+    autoplay: false,
+    duration: 500,
+    interval: 5000,
+    swiperList,
   },
+  
+  methods: {
+    onChange(e) {
+      const {
+        detail: { current, source },
+      } = e;
+      console.log(current, source);
+    },
+  },
+
   goDetail(e) {
     wx.navigateTo({
       url: `/pages/detail/detail?id=${e.currentTarget.dataset.id}`
@@ -23,6 +48,7 @@ Page({
   },
 
   onLoad: function (options) {
+
     MYWXAPI.storys({
         page: 1,
         pagenum: 3,
@@ -32,7 +58,20 @@ Page({
           storys: res.data
         })
       }
-    })
+    });
+
+    MYWXAPI.advBanner({
+      page: 1,
+      pagenum: 3,
+      type_id: 1,
+    }).then(res => {
+    if (res.status == 0) {
+      this.setData({
+        advBanner: res.data
+      })
+    }
+    });
+
   },
 
   // onLoad: function (options) {
