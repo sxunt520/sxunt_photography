@@ -72,6 +72,18 @@ Page({
     }
     });
 
+    MYWXAPI.advBanner({
+      page: 1,
+      pagenum: 4,
+      type_id: 2,
+    }).then(res => {
+    if (res.status == 0) {
+      this.setData({
+        swiperList2:res.data.map(item => item.advimg)
+      })
+    }
+    });
+
   },
 
   // onLoad: function (options) {

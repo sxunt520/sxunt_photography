@@ -33,11 +33,12 @@
     interval="{{interval}}"
     bindchange="onChange"
     navigation="{{ { type: 'dots' } }}"
-    list="{{swiperList}}"
+    list="{{swiperList2}}"
     image-props="{{ { shape: 'round' } }}"
     previousMargin="34px"
     nextMargin="34px"
     t-class-nav="card-theme-nav"
+    height="392"
   />
 </view>
 
