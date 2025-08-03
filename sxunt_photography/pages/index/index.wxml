@@ -38,7 +38,7 @@
     previousMargin="34px"
     nextMargin="34px"
     t-class-nav="card-theme-nav"
-    height="392"
+    height="400"
   />
 </view>
 
