@@ -445,6 +445,10 @@ module.exports = {
     return request('/story/home', true, 'post', data)
   },
 
+  advBanner: (data) => {
+    return request('/adv/banner', true, 'post', data)
+  },
+
   goodsCategory: () => {
     return request('/shop/goods/category/all', true, 'get')
   },

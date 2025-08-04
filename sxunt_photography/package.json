@@ -1,0 +1,26 @@
+{
+  "name": "sxuntphotography",
+  "version": "1.0.0",
+  "description": "sxunt_photography",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sxunt520/sxunt_photography.git"
+  },
+  "author": "vihooo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sxunt520/sxunt_photography/issues"
+  },
+  "homepage": "https://github.com/sxunt520/sxunt_photography#readme",
+  "keywords": [],
+  "dependencies": {
+    "apifm-wxapi": "^25.7.2",
+    "miniprogram-sm-crypto": "^0.3.13",
+    "tdesign-miniprogram": "^1.10.0"
+  },
+  "devDependencies": {}
+}

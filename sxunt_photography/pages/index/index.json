@@ -1,3 +1,8 @@
 {
-  "navigationBarTitleText": "摄影画廊主页"
+  "navigationBarTitleText": "摄影画廊主页",
+  "usingComponents": {
+    "t-button": "tdesign-miniprogram/button/button",
+    "t-swiper": "tdesign-miniprogram/swiper/swiper",
+    "t-swiper-nav": "tdesign-miniprogram/swiper-nav/swiper-nav"
+  }
 }
