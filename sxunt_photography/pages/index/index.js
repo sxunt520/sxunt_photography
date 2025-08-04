@@ -1,5 +1,9 @@
 //const WXAPI = require('apifm-wxapi')
-const MYWXAPI = require('my-wxapi')
+//const MYWXAPI = require('my-wxapi')
+
+const MYWXAPI = require('../../components/my-wxapi/index.js')
+//import {MYWXAPI} from '../../api/my-wxapi';
+
 
 const imageCdn = 'https://tdesign.gtimg.com/mobile/demos';
 const swiperList = [

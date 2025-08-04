@@ -2,7 +2,10 @@
 //WXAPI.init('sxunt')
 //WXAPI.init('photography')
 
-const MYWXAPI = require('my-wxapi')
+// const MYWXAPI = require('my-wxapi')
+// MYWXAPI.init('v1')
+
+const MYWXAPI = require('./components/my-wxapi/index.js')
 MYWXAPI.init('v1')
 
 App({
