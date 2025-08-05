@@ -10,6 +10,6 @@ MYWXAPI.init('v1')
 
 App({
   onLaunch() {
-    console.log('摄影展小程序启动');
+    console.log('欢迎来到始渲！');
   }
 });

@@ -51,6 +51,13 @@ Page({
     });
   },
 
+  //跳转渲染详情
+  goEdifyDetail(e) {
+    wx.navigateTo({
+      url: `/pages/detail/detail?id=${e.currentTarget.dataset.id}`
+    });
+  },
+
   onLoad: function (options) {
 
     MYWXAPI.storys({
@@ -84,6 +91,19 @@ Page({
     if (res.status == 0) {
       this.setData({
         swiperList2:res.data.map(item => item.advimg)
+      })
+    }
+    });
+
+    MYWXAPI.EdifyList({
+      page: 1,
+      pagenum: 4,
+      source: 1,//可选
+    }).then(res => {
+    if (res.status == 0) {
+      this.setData({
+        //EdifyList:res.data.map(item => item.picurl)
+        EdifyList:res.data
       })
     }
     });

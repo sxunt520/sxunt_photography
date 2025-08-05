@@ -1,5 +1,5 @@
 {
-  "navigationBarTitleText": "摄影画廊主页",
+  "navigationBarTitleText": "始渲-SXUNT",
   "usingComponents": {
     "t-button": "tdesign-miniprogram/button/button",
     "t-swiper": "tdesign-miniprogram/swiper/swiper",
