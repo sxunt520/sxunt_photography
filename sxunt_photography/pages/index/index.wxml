@@ -13,7 +13,7 @@
    <!-- adv_banner -->
    <swiper indicator-dots autoplay circular>
     <block wx:for="{{advBanner}}" wx:key="id">
-      <swiper-item>
+      <swiper-item bindtap="jumpurl" data-jumpurl="{{item.jumpurl}}">
         <image src="{{item.advimg}}" mode="aspectFill" class="carousel-img" />
       </swiper-item>
     </block>
@@ -39,6 +39,7 @@
     nextMargin="34px"
     t-class-nav="card-theme-nav"
     height="400"
+    bind:click="navToActivityDetail"
   />
 </view>
 

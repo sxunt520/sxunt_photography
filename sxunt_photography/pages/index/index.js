@@ -58,18 +58,25 @@ Page({
     });
   },
 
+  //跳转url
+  jumpurl(e) {
+    wx.navigateTo({
+      url: e.currentTarget.dataset.jumpurl
+    });
+  },
+
   onLoad: function (options) {
 
-    MYWXAPI.storys({
-        page: 1,
-        pagenum: 3,
-      }).then(res => {
-      if (res.status == 0) {
-        this.setData({
-          storys: res.data
-        })
-      }
-    });
+    // MYWXAPI.storys({
+    //     page: 1,
+    //     pagenum: 3,
+    //   }).then(res => {
+    //   if (res.status == 0) {
+    //     this.setData({
+    //       storys: res.data
+    //     })
+    //   }
+    // });
 
     MYWXAPI.advBanner({
       page: 1,
@@ -89,9 +96,16 @@ Page({
       type_id: 2,
     }).then(res => {
     if (res.status == 0) {
+
+      // const transformedData = res.data.map(item => {
+      //   return { [item.jumpurl]: item.advimg };
+      // })
+      //  console.log(transformedData);
+      
       this.setData({
         swiperList2:res.data.map(item => item.advimg)
       })
+
     }
     });
 
@@ -160,5 +174,12 @@ Page({
   //   })
   // },
 
+  navToActivityDetail({ detail }) {
+    console.log(detail);
+    // const { index: promotionID = 0 } = detail || {};
+    // wx.navigateTo({
+    //   url: `/pages/promotion/promotion-detail/index?promotion_id=${promotionID}`,
+    // });
+  },
 
 });
