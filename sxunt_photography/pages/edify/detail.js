@@ -1,3 +1,5 @@
+const MYWXAPI = require('../../components/my-wxapi/index.js')
+
 // 模拟数据源，根据id获取图片详情
 const images = [
   { id: 1, url: '/assets/pic1.jpg', title: '夕阳下的剪影', inspiration: '逆光拍摄可以突出轮廓与氛围' },
@@ -13,7 +15,19 @@ Page({
     image: {}
   },
   onLoad(options) {
-    const img = images.find(i => i.id == options.id) || {};
-    this.setData({ image: img });
+    //const img = images.find(i => i.id == options.id) || {};
+    //this.setData({ image: img });
+
+    MYWXAPI.EdifyDetail({
+      id: options.id,
+    }).then(res => {
+    if (res.status == 0) {
+      this.setData({
+        //EdifyList:res.data.map(item => item.picurl)
+        EdifyDetail:res.data
+      })
+    }
+    });
+
   }
 });

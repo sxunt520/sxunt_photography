@@ -3,7 +3,8 @@
     "pages/index/index",
     "pages/inspiration/inspiration",
     "pages/mine/mine",
-    "pages/detail/detail"
+    "pages/detail/detail",
+    "pages/edify/detail"
   ],
   "window": {
     "navigationBarTitleText": "摄影照片画廊"

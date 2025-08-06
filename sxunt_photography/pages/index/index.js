@@ -54,7 +54,7 @@ Page({
   //跳转渲染详情
   goEdifyDetail(e) {
     wx.navigateTo({
-      url: `/pages/detail/detail?id=${e.currentTarget.dataset.id}`
+      url: `/pages/edify/detail?id=${e.currentTarget.dataset.id}`
     });
   },
 

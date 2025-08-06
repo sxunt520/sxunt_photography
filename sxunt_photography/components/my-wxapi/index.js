@@ -91,4 +91,8 @@ module.exports = {
     return request('/edify/list', true, 'post', data)
   },
 
+  EdifyDetail: (data) => {
+    return request('/edify/detail', true, 'post', data)
+  },
+
 }
