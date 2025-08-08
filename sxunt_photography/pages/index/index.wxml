@@ -24,8 +24,18 @@
     <text>{{announcement}}</text>
   </view>
 
+  <!-- swiperList3 -->
+  <swiper  class="swiper-container" circular autoplay layout-type="transformer" transformer-type="deepthPage" previous-margin="60px"
+			 next-margin="60px">
+    <block wx:for="{{swiperList3}}" wx:key="id">
+      <swiper-item bindtap="jumpurl" data-jumpurl="{{item.jumpurl}}">
+        <image src="{{item.advimg}}" mode="aspectFill" class="carousel-img" />
+      </swiper-item>
+    </block>
+  </swiper>
+
   <!-- 卡片式（cards）轮播图 -->
-  <view class="card-theme">
+  <!-- <view class="card-theme">
   <t-swiper
     current="{{current}}"
     autoplay="{{autoplay}}"
@@ -41,7 +51,7 @@
     height="400"
     bind:click="navToActivityDetail"
   />
-</view>
+</view> -->
 
 <view class="recommend-title">推荐图片</view>
   <view class="recommend-list">

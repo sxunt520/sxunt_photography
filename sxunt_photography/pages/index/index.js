@@ -95,18 +95,21 @@ Page({
       pagenum: 4,
       type_id: 2,
     }).then(res => {
-    if (res.status == 0) {
+      if (res.status == 0) {
 
-      // const transformedData = res.data.map(item => {
-      //   return { [item.jumpurl]: item.advimg };
-      // })
-      //  console.log(transformedData);
-      
-      this.setData({
-        swiperList2:res.data.map(item => item.advimg)
-      })
+        // const transformedData = res.data.map(item => {
+        //   return { [item.jumpurl]: item.advimg };
+        // })
+        //  console.log(transformedData);
+        
+        this.setData({
+          swiperList2:res.data.map(item => item.advimg)
+        })
+        this.setData({
+          swiperList3:res.data
+        })
 
-    }
+      }
     });
 
     MYWXAPI.EdifyList({
