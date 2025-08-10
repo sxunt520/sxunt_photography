@@ -34,6 +34,29 @@ Page({
     duration: 500,
     interval: 5000,
     swiperList,
+    VVVVList: [
+      {
+        id: 1,
+        advimg: 'https://axe-video-1257242485.cos.ap-guangzhou.myqcloud.com/img_static/20250803/688f7322cd8fc.jpg',
+        title: '轮播图1'
+      },
+      {
+        id: 2,
+        advimg: 'https://axe-video-1257242485.cos.ap-guangzhou.myqcloud.com/img_static/20250803/688f7322cd8fc.jpg',
+        title: '轮播图2'
+      },
+      {
+        id: 3,
+        advimg: 'https://axe-video-1257242485.cos.ap-guangzhou.myqcloud.com/img_static/20250803/688f7322cd8fc.jpg',
+        title: '轮播图3'
+      }
+    ],
+    XswiperListX: [
+      { id: 1, image: 'https://axe-video-1257242485.cos.ap-guangzhou.myqcloud.com/img_static/20250803/688f7322cd8fc.jpg', url: '/pages/detail/detail?id=11' },
+      { id: 2, image: 'https://axe-video-1257242485.cos.ap-guangzhou.myqcloud.com/img_static/20250803/688f7322cd8fc.jpg', url: '/pages/detail/detail?id=12' },
+      { id: 3, image: 'https://axe-video-1257242485.cos.ap-guangzhou.myqcloud.com/img_static/20250803/688f7322cd8fc.jpg', url: '/pages/detail/detail?id=13' }
+    ]
+
   },
   
   methods: {
@@ -103,8 +126,13 @@ Page({
         //  console.log(transformedData);
         
         this.setData({
-          swiperList2:res.data.map(item => item.advimg)
+          swiperList2:res.data.map(item => item.advimg),
+          swiperList2ToDetail:res.data.map(item => item.jumpurl)
         })
+        // this.setData({
+        //   swiperList2ToDetail:res.data.map(item => item.jumpurl)
+        // })
+
         this.setData({
           swiperList3:res.data
         })
@@ -183,6 +211,21 @@ Page({
     // wx.navigateTo({
     //   url: `/pages/promotion/promotion-detail/index?promotion_id=${promotionID}`,
     // });
+
+    const { index } = detail
+    wx.navigateTo({
+      url: this.data.swiperList2ToDetail[index]
+    })
+
   },
+
+  handleSwiperClick(e) {
+    const { index } = e.detail
+    const currentItem = this.data.XswiperListX[index]
+    
+    wx.navigateTo({
+      url: currentItem.url
+    })
+  }
 
 });

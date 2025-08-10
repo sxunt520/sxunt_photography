@@ -26,7 +26,8 @@
         "packageJsonPath": "./package.json",
         "miniprogramNpmDistDir": "./"
       }
-    ]
+    ],
+    "ignoreUploadUnusedFiles": true
   },
   "compileType": "miniprogram",
   "simulatorPluginLibVersion": {},
@@ -35,6 +36,10 @@
     "include": []
   },
   "appid": "wxcf4760b4382b0621",
-  "editorSetting": {},
-  "libVersion": "3.9.0"
+  "editorSetting": {
+    "tabIndent": "insertSpaces",
+    "tabSize": 2
+  },
+  "libVersion": "3.9.0",
+  "condition": {}
 }

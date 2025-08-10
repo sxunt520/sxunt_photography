@@ -25,17 +25,61 @@
   </view>
 
   <!-- swiperList3 -->
-  <swiper  class="swiper-container" circular autoplay layout-type="transformer" transformer-type="deepthPage" previous-margin="60px"
-			 next-margin="60px">
+  <!-- <swiper  class="swiper-container" circular autoplay>
     <block wx:for="{{swiperList3}}" wx:key="id">
       <swiper-item bindtap="jumpurl" data-jumpurl="{{item.jumpurl}}">
         <image src="{{item.advimg}}" mode="aspectFill" class="carousel-img" />
       </swiper-item>
     </block>
-  </swiper>
+  </swiper> -->
+
+    <!-- <view class="section center">
+			<view class="section-title center">Action-渲染吧</view>
+			<swiper
+			 circular
+       autoplay
+			 class="swiper-container"
+			 layout-type="transformer"
+			 transformer-type="scaleAndFade"
+  			 previous-margin="30px"
+			 next-margin="30px"
+			>
+				<swiper-item wx:for="{{swiperList3}}" wx:key="*this"  bindtap="jumpurl" data-jumpurl="{{item.jumpurl}}">
+					<image class="img" src="{{item.advimg}}" mode="aspectFill" />
+				</swiper-item>
+			</swiper>
+		</view> -->
+
+    <!-- <t-swiper
+    list="{{VVVVList}}"
+    bind:click="jumpurl"
+    autoplay
+    interval="5000"
+    duration="500"
+    circular
+    >
+    <view slot="item" slot-scope="item" class="swiper-item">
+      <image src="{{item.advimg}}" mode="widthFix" class="swiper-img" data-id="{{item.id}}" ></image>
+      <view class="swiper-title">{{item.title}}</view>
+    </view>
+  </t-swiper> -->
+
+<!-- <t-swiper
+  list="{{XswiperListX}}"
+  autoplay
+  interval="3000"
+  circular
+  bind:click="handleSwiperClick"
+>
+  <view slot="swiper-item" slot-scope="item" class="swiper-item">
+    <image src="{{item.image}}" mode="aspectFill" class="swiper-image" />
+    <view class="swiper-title">{{item.title}}</view>
+  </view>
+</t-swiper> -->
+
 
   <!-- 卡片式（cards）轮播图 -->
-  <!-- <view class="card-theme">
+  <view class="card-theme">
   <t-swiper
     current="{{current}}"
     autoplay="{{autoplay}}"
@@ -49,9 +93,10 @@
     nextMargin="34px"
     t-class-nav="card-theme-nav"
     height="400"
+    pagination-position="bottom"
     bind:click="navToActivityDetail"
   />
-</view> -->
+</view>
 
 <view class="recommend-title">推荐图片</view>
   <view class="recommend-list">

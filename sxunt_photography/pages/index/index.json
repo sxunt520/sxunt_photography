@@ -1,7 +1,7 @@
 {
   "navigationBarTitleText": "始渲-SXUNT",
+  "component": true,
   "usingComponents": {
-    "t-button": "tdesign-miniprogram/button/button",
     "t-swiper": "tdesign-miniprogram/swiper/swiper",
     "t-swiper-nav": "tdesign-miniprogram/swiper-nav/swiper-nav"
   }
