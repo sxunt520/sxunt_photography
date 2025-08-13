@@ -22,7 +22,7 @@ Page({
       '/assets/pic3.jpg',
       '/assets/pic4.jpg'
     ],
-    announcement: '欢迎来到摄影画廊，发现摄影灵感！',
+    announcement: '开 始 沉 浸 渲 染 | Discovery·灵 感!',
     recommendImages: [
       { id: 1, url: '/assets/pic1.jpg', title: '夕阳下的剪影' },
       { id: 2, url: '/assets/pic2.jpg', title: '城市夜景' },

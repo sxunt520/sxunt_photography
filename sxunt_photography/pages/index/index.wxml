@@ -98,7 +98,7 @@
   />
 </view>
 
-<view class="recommend-title">推荐图片</view>
+<view class="recommend-title">灵感渲染</view>
   <view class="recommend-list">
     <block wx:for="{{EdifyList}}" wx:key="data-id">
       <view class="recommend-item" bindtap="goEdifyDetail" data-id="{{item.id}}">
@@ -109,7 +109,7 @@
   </view>
 
   <!-- 推荐图片列表 -->
-  <view class="recommend-title">推荐图片</view>
+  <!-- <view class="recommend-title">推荐图片</view>
   <view class="recommend-list">
     <block wx:for="{{recommendImages}}" wx:key="index">
       <view class="recommend-item" bindtap="goDetail" data-id="{{item.id}}">
@@ -117,7 +117,7 @@
         <view class="img-title">{{item.title}}</view>
       </view>
     </block>
-  </view>
+  </view> -->
   
 <!--  -->
  <!-- <swiper>
