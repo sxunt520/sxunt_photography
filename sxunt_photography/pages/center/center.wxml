@@ -1,0 +1,33 @@
+<view>
+  <image class="center_bg" mode='aspectFill' src='/assets/my_bg.jpg'></image>
+  <view class="avatar-warp">
+    <image class="avatar" mode='aspectFill' src='{{mylogo}}'></image>
+    <view class="nickname">{{myname}}</view>
+    <view class="user-info">
+      <image src='../../assets/icons/level.png'></image>糖水艺术家</view>
+    <view class="article-info">
+      <view class="article-item">
+        <text class="num">{{newsNumber}}</text>作品</view>
+      <view class="article-item">
+        <text class="num">{{fileNumber}}</text>胶片</view>
+      <view class="article-item">
+        <text class="num">{{views}}</text>浏览</view>
+      <!-- <navigator hover-class='none' url='../credits/credits' class="article-item"><text class="num">{{views}}</text>浏览</navigator> -->
+    </view>
+  </view>
+  <view class="menu-warp">
+    <navigator url='/pages/page/article?key=introduce'>
+      <image class="icon" src='../../assets/icons/about.png'></image>
+      关于我想学摄影
+      <image class="next" src='../../assets/icons/next.png'></image>
+    </navigator>
+  </view>
+  <view class="menu-warp">
+    <navigator url='/pages/page/article?key=about'>
+      <image class="icon" src='../../assets/icons/developer.png'></image>
+      关于开发者
+      <image class="next" src='../../assets/icons/next.png'></image>
+    </navigator>
+  </view>
+  <button type="default" bindtap="calling" style='width:80%;margin-bottom:20px;color:#fff; background-color:rgb(74, 171, 39)'>电话联系我</button>
+</view>

@@ -1,8 +1,9 @@
 {
   "pages": [
+    "pages/logo/logo",
     "pages/index/index",
     "pages/inspiration/inspiration",
-    "pages/mine/mine",
+    "pages/center/center",
     "pages/detail/detail",
     "pages/edify/detail"
   ],
@@ -24,7 +25,7 @@
         "selectedIconPath": "assets/inspiration_active.png"
       },
       {
-        "pagePath": "pages/mine/mine",
+        "pagePath": "pages/center/center",
         "text": "关于我",
         "iconPath": "assets/mine.png",
         "selectedIconPath": "assets/mine_active.png"
