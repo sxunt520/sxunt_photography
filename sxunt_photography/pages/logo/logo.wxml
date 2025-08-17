@@ -1,4 +1,4 @@
 <!--pages/logo/logo.wxml-->
-<view class="logo">
-  <image bindtap="bindLogoTap" class="logo_page" src="../../assets/images/logoxx.jpg" mode="widthFix"></image>
+<view class="logo"  wx:for="{{logoimg}}" wx:key="id">
+  <image bindtap="bindLogoTap" class="logo_page" src="{{item.advimg}}" mode="widthFix"></image>
 </view>

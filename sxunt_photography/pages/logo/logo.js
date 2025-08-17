@@ -1,3 +1,4 @@
+const MYWXAPI = require('../../components/my-wxapi/index.js')
 // pages/logo/logo.js
 Page({
   /**
@@ -17,6 +18,19 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+
+    MYWXAPI.advBanner({
+      page: 1,
+      pagenum: 1,
+      type_id: 3,
+    }).then(res => {
+    if (res.status == 0) {
+      this.setData({
+        logoimg: res.data
+      })
+    }
+    });
+
     // 设置初始计时秒数
     let time = 1;
     // 开始定时器
