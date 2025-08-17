@@ -2,8 +2,8 @@
   <view class="column" wx:for="{{waterfallColumns}}" wx:key="index">
     <block wx:for="{{item}}" wx:key="id">
       <view class="waterfall-item" bindtap="goDetail" data-id="{{item.id}}">
-        <image src="{{item.url}}" mode="widthFix" />
-        <view class="img-desc">{{item.desc}}</view>
+        <image src="{{item.px260Pic}}" mode="widthFix" />
+        <view class="img-desc">{{item.title}}</view>
       </view>
     </block>
   </view>

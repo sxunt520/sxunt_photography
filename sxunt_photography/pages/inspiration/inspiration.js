@@ -1,3 +1,5 @@
+const MYWXAPI = require('../../components/my-wxapi/index.js')
+
 // 所有图片数据（建议实际开发放在云端或接口返回）
 const allImages = [
   { id: 1, url: '/assets/pic1.jpg', desc: '光影与构图' },
@@ -39,10 +41,12 @@ Page({
     waterfallColumns: [],
     loadedCount: 0,
     loading: false,
-    hasMore: true
+    hasMore: true,
+    page:1
   },
   onLoad() {
-    this.loadMore();
+    //this.loadMore();
+    this.loadMore2();
   },
   loadMore() {
     if (this.data.loading || !this.data.hasMore) return;
@@ -63,8 +67,47 @@ Page({
       loading: false
     });
   },
+  loadMore2() {
+    //if (this.data.loading || !this.data.hasMore) return;
+    //this.setData({ loading: true });
+
+    //const start = this.data.page;
+    //const end = start + PAGE_SIZE;
+
+    MYWXAPI.EdifyList({
+      page: this.data.page,
+      pagenum: PAGE_SIZE
+      //source: 1,//可选
+      }).then(res => {
+      if (res.status == 0) {
+          // this.setData({
+          //   EdifyList:res.data
+          // })
+          const nextImages = res.data;
+          //const newLoadedCount = end;
+          let nextpage=this.data.page+1;
+
+
+          //const nextImages = allImages.slice(start, end);
+          //const newLoadedCount = end > allImages.length ? allImages.length : end;
+
+          let mergedImages = (this.data.waterfallColumns.flat()).concat(nextImages);
+          let newColumns = splitColumns(mergedImages, 2);
+
+          this.setData({
+            waterfallColumns: newColumns,
+            //loadedCount: newLoadedCount,
+            hasMore: true,
+            loading: false,
+            page:nextpage
+          });
+
+        }
+    });
+
+  },
   onReachBottom() {
-    this.loadMore();
+    this.loadMore2();
   },
   goDetail(e) {
     wx.navigateTo({
