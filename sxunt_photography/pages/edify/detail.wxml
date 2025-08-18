@@ -1,5 +1,5 @@
 <view class="detail-container">
-  <image src="{{EdifyDetail.picurl}}" mode="widthFix" class="detail-img" />
+  <image src="{{EdifyDetail.px260Pic}}" mode="widthFix" class="detail-img" />
   <view class="detail-title">{{EdifyDetail.title || EdifyDetail.digestPage}}</view>
   <view class="detail-desc">{{EdifyDetail.digestPage || '用不同的角度观察世界，发现独特美感'}}</view>
 </view>

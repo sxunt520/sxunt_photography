@@ -68,8 +68,8 @@ Page({
     });
   },
   loadMore2() {
-    //if (this.data.loading || !this.data.hasMore) return;
-    //this.setData({ loading: true });
+    if (this.data.loading || !this.data.hasMore) return;
+    this.setData({ loading: true });
 
     //const start = this.data.page;
     //const end = start + PAGE_SIZE;
@@ -80,9 +80,15 @@ Page({
       //source: 1,//可选
       }).then(res => {
       if (res.status == 0) {
-          // this.setData({
-          //   EdifyList:res.data
-          // })
+          
+          if (Array.isArray(res.data) && res.data.length === 0) {//如果没有数据了
+            this.setData({
+              hasMore: false,
+              loading: false
+            });
+            return;
+          }
+
           const nextImages = res.data;
           //const newLoadedCount = end;
           let nextpage=this.data.page+1;
@@ -111,7 +117,7 @@ Page({
   },
   goDetail(e) {
     wx.navigateTo({
-      url: `/pages/detail/detail?id=${e.currentTarget.dataset.id}`
+      url: `/pages/edify/detail?id=${e.currentTarget.dataset.id}`
     });
   }
 });
