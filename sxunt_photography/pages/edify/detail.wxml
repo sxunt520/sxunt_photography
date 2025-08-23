@@ -1,5 +1,21 @@
 <view class="detail-container">
+
   <image src="{{EdifyDetail.px260Pic}}" mode="widthFix" class="detail-img" />
   <view class="detail-title">{{EdifyDetail.title || EdifyDetail.digestPage}}</view>
   <view class="detail-desc">{{EdifyDetail.digestPage || '用不同的角度观察世界，发现独特美感'}}</view>
+
+  <t-button theme="default" size="large" variant="outline" block bind:tap="onClick">画廊·SHOW</t-button>
+  <t-toast id="t-toast" />
+  <t-image-viewer
+    usingCustomNavbar
+    deleteBtn="{{deleteBtn}}"
+    closeBtn="{{closeBtn}}"
+    showIndex="{{showIndex}}"
+    visible="{{visible}}"
+    images="{{EdifyImg}}"
+    bind:change="onChange"
+    bind:delete="onDelete"
+    bind:close="onClose"
+  ></t-image-viewer>
+
 </view>
