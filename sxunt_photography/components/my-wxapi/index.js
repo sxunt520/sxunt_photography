@@ -95,4 +95,8 @@ module.exports = {
     return request('/edify/detail', true, 'post', data)
   },
 
+  EdifyImg: (data) => {
+    return request('/edify/edify-img', true, 'post', data)
+  },
+
 }
