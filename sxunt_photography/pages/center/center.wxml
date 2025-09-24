@@ -18,7 +18,7 @@
   <view class="menu-warp">
     <navigator url='/pages/page/article?key=introduce'>
       <image class="icon" src='../../assets/icons/about.png'></image>
-      关于我想学摄影
+      关于我
       <image class="next" src='../../assets/icons/next.png'></image>
     </navigator>
   </view>
